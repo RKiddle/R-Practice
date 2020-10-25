@@ -18,3 +18,11 @@ probability_fair / (probability_fair + probability_biased)
 probability_fair <- dbinom(18, 20, .5)
 probability_biased <- dbinom(18, 20, .75)
 probability_fair / (probability_fair + probability_biased)
+
+
+# Use dbinom to find the probability of 16/20 from a fair or biased coin
+probability_16_fair <- dbinom(16, 20, .5)
+probability_16_biased <- dbinom(16, 20, .75) 
+
+# Use Bayes' theorem to find the posterior probability that the coin is fair
+probability_16_fair * .99 / (probability_16_fair * .99 + probability_16_biased * .01)
