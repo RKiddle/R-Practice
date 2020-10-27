@@ -25,3 +25,10 @@ geom_sample <- rgeom(100000, .2)
 
 # Compare the two distributions with compare_histograms
 compare_histograms(replications, geom_sample)
+
+
+# Find the probability the machine breaks on 5th day or earlier
+pgeom(4, .1)
+
+# Find the probability the machine is still working on 20th day
+1 - pgeom(19, .1)
