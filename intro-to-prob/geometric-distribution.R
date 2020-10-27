@@ -32,3 +32,10 @@ pgeom(4, .1)
 
 # Find the probability the machine is still working on 20th day
 1 - pgeom(19, .1)
+
+
+# Calculate the probability of machine working on day 1-30
+still_working <- 1- pgeom(0:29, .1)
+
+# Plot the probability for days 1 to 30
+qplot(1:30, still_working)
